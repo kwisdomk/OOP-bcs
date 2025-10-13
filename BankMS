@@ -1,0 +1,81 @@
+
+#include <iostream>
+using namespace std;
+
+// 1. Define a base class AccountHolder that includes:
+//      i) A protected data member name(string),
+//      ii) A public member function setName(string n) to set the name,
+//      iii) A public member function getName() to return the name.
+
+class AccountHolder {
+    protected:
+        string name;
+    public:
+        void setName (string n) { // use void to avoid returning anyhting
+            name = n;
+        }
+    public:
+        string getName() {
+            return name;
+        }        
+}
+
+// 2. Define a derived class BankAccount that inherits from the AccountHolder class and includes:
+//      i) A private data member accountNumber(int)
+//      ii)A private data member balance(double),
+//      iii) A constructor to initialize the account number and balance, by calling the base class constructor.
+//      iv) A public member function getAccountNumber() to return the account number,
+//      v) A public member function getBalance() to return the balance.
+
+class BankAccount public AccountHolder {
+    private:
+        int accountnumber;
+        double balance;
+//Constructor
+    public:
+       BankAccount (string n, int accountnumber, double balance) {
+            setName(n); // calling base class constructor that init the string (n)
+            accountnumber = accnu;
+            balance = bal;
+       } //We can now access accountname(string n), accountnumber and balance
+
+    public:
+       int get accnumber() {
+            return accountnumber
+       }   
+       double getbalance () {
+            return balance;
+       }
+}
+
+// 3. Define another derived class SavingsAccount that inherists from the BankAccount class and includes:
+//      i) A private data member interestRate(double),
+//      ii) A constructor to initialize the interest rate,
+//      iii) A public member function getInterestRate() to return the interest rate.
+
+class SavingsAccount public BankAccount {
+    private:
+        double interestRate;
+
+// we'll now inherit the string n, accountnumber and balance from the BankAccount class, then inherit the constrictor from the BankAccount class
+    public:
+        SavingsAccount (string n, int accountnumber, double accountbalance, double interestRate) {
+            interestRate = interestRate;
+        }
+    public:
+        double getInterestRate() {
+            return interestRate;
+        }
+}
+
+
+int main() {
+    // Create an object of the SavingsAccount class
+    Savings("Wis Kin", 18333799, 90000.0, 10.98); // name, accountnumber, balance, interestRate
+    // Set the name of the account holder
+    string.setName("Wis Kin");
+    // Display the account holder's name, account number, balance, and interest rate
+    cout << "Account Holder Name: " << s.getName() << endl;
+    cout << "Account Number: " << s.getAccountNumber() << endl;
+    cout << "Balance: $" << s.getBalance() << endl; 
+    cout << "Interest Rate: " << s.getInterestRate() << endl;

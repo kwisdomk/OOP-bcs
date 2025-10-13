@@ -1,0 +1,40 @@
+//if statement
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int number;
+    cout << "Enter an Integer: ";
+    cin >> number;
+
+    // checks if the number is positive
+    if (number > 0) {
+        cout << "You entered a positive integer: " << number << endl;
+    }
+
+    cout << "This statement is always executed." << endl;
+    return 0;
+}
+
+
+// if ...else statement
+if (condition) {
+    // code block if condition is true
+}
+else {
+    //codeblock if condition is false
+}
+
+
+if...else...else if statement
+if (condition1) {
+    // code block if condition1 is true
+}
+else if (condition2) {
+    // code block if condition2 is true
+}
+else {
+    // code block if both conditions are false
+}
